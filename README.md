@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Marketplace-Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
+Este es el frontend para un marketplace, implementado utilizando React. Este frontend se conecta con un backend REST API para gestionar operaciones relacionadas con vendedores y otros recursos del marketplace.
 
-## Available Scripts
+## Requisitos Previos
+Antes de comenzar, asegúrate de tener instalado Node.js y npm en tu sistema. Este proyecto fue creado con `create-react-app`.
 
-In the project directory, you can run:
+## Instalación
+Para instalar y configurar el proyecto localmente, sigue estos pasos:
 
-### `npm start`
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/salvadormartin3z/Marketplace-Frontend
+   cd marketplace-frontend
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Instala las dependencias:
+    ```bash
+    npm install
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Configura las variables de entorno:
+    Crea un archivo .env en la raíz del proyecto con las siguientes variables necesarias para la conexión con el backend y otras configuraciones importantes.
 
-### `npm test`
+    ```bash
+    REACT_APP_API_URL=http://localhost:8000
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Nota: El archivo .env no se incluye en el repositorio por motivos de seguridad. Debes crear tu propio archivo .env localmente.
 
-### `npm run build`
+4. Inicia el servidor:
+    ```bash
+    npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    Esto compilará la aplicación y abrirá una ventana en tu navegador por defecto. Si el navegador no se abre automáticamente, puedes acceder manualmente a http://localhost:3000.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contacto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Puedes encontrarme y contactarme a través de las siguientes plataformas:
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Portafolio**: [Salvador Martínez - Portafolio](https://salvadormartin3z.netlify.app/)
+- **LinkedIn**: [Salvador Martínez en LinkedIn](https://www.linkedin.com/in/salvadormtz/)
+- **GitHub**: [Salvador Martínez en GitHub](https://github.com/salvadormartin3z)
