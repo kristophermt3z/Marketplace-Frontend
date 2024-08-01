@@ -13,7 +13,7 @@ function VendedorForm() {
             setEmail('');
             setPassword('');
         } catch (error) {
-            alert('Error al crear vendedor: ' + error.response.data);
+            alert('Error al crear vendedor: ' + error.response);
         }
     };
 
