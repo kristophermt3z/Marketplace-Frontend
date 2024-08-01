@@ -9,8 +9,6 @@ Este es el frontend para un marketplace, implementado utilizando React. Este fro
 ## Requisitos Previos
 Antes de comenzar, asegúrate de tener instalado Node.js y npm en tu sistema. Este proyecto fue creado con `create-react-app`.
 
-- **Backend**: [Backend en GitHub](https://github.com/salvadormartin3z/Marketplace-Backend)
-
 ## Instalación
 Para instalar y configurar el proyecto localmente, sigue estos pasos:
 
@@ -39,6 +37,9 @@ Para instalar y configurar el proyecto localmente, sigue estos pasos:
     ```
 
     Esto compilará la aplicación y abrirá una ventana en tu navegador por defecto. Si el navegador no se abre automáticamente, puedes acceder manualmente a http://localhost:3000.
+
+5. También necesitarás instalar y configurar el backend del proyecto para una funcionalidad completa:
+- **Backend**: [Backend en GitHub](https://github.com/salvadormartin3z/Marketplace-Backend)
 
 ## Contacto
 
