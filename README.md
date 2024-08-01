@@ -1,7 +1,7 @@
 # Marketplace-Frontend
 
 ## Link de Producción
-Visita la versión en producción del frontend aquí: [Marketplace Frontend](https://marketplace-salvadormartinez.netlify.app/)
+Visita la versión en producción aquí: [Marketplace](https://marketplace-salvadormartinez.netlify.app/)
 
 ## Descripción
 Este es el frontend para un marketplace, implementado utilizando React. Este frontend se conecta con un backend REST API para gestionar operaciones relacionadas con vendedores y otros recursos del marketplace.
