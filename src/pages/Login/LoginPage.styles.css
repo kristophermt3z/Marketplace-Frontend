@@ -16,6 +16,7 @@
 
 .login-form {
     width: 100%;
+    margin-bottom: 10px;
 }
 
 .form-group {
@@ -24,7 +25,7 @@
 
 .form-label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     font-weight: bold;
 }
 
@@ -59,6 +60,7 @@
 .register-prompt {
     margin-top: 20px;
     text-align: center;
+    font-size: small;
 }
 
 .register-link {

@@ -64,7 +64,7 @@ function LoginPage() {
         </div>
       </form>
       <p className="register-prompt">
-        Don't have an account?{" "}
+        Don't have a seller account?{" "}
         <Link to="/register" className="register-link">
           Create one here
         </Link>
