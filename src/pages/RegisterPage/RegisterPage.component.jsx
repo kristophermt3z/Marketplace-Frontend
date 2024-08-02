@@ -8,7 +8,8 @@ function RegisterPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [error, setError] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [succesMessage, setSuccesMessage] = useState("");
 
   const { login } = useAuth();
   const navigate = useNavigate(); // Get the navigate function
@@ -16,7 +17,7 @@ function RegisterPage() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (password !== confirmPassword) {
-      setError("Passwords do not match");
+      setErrorMessage("Passwords do not match");
       return;
     }
 
@@ -28,14 +29,14 @@ function RegisterPage() {
           password,
         }
       );
-      alert("User registered successfully");
+      setSuccesMessage(response.data);
       login(response.data.token);
-      setEmail(""); 
-      setPassword(""); 
-      setConfirmPassword(""); 
-      navigate("/"); 
+      setEmail("");
+      setPassword("");
+      setConfirmPassword("");
+      navigate("/");
     } catch (error) {
-      setError("Error registering the user");
+      setErrorMessage(error.response.data);
     }
   };
 
@@ -82,7 +83,8 @@ function RegisterPage() {
             required
           />
         </div>
-        {error && <p className="error-message">{error}</p>}
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
+        {succesMessage && <p className="succes-message">{succesMessage}</p>}
         <div className="form-button-container">
           <button className="form-button" type="submit">
             Register

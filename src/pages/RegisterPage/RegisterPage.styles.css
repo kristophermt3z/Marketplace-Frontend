@@ -60,3 +60,8 @@
     color: red;
     text-align: center;
 }
+
+.succes-message {
+    color: rgb(51, 191, 23);
+    text-align: center;
+}

@@ -7,6 +7,8 @@ import "./LoginPage.styles.css";
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [succesMessage, setSuccesMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const { login } = useAuth();
   const navigate = useNavigate(); // Get the navigate function
 
@@ -17,13 +19,13 @@ function LoginPage() {
         `${process.env.REACT_APP_API_URL}/login`,
         { email, password }
       );
-      alert("Login successful: " + response.data.message);
+      setSuccesMessage(response.data.message);
       login(response.data.token); 
       setEmail(""); 
       setPassword("");
       navigate("/");
     } catch (error) {
-      alert("Error logging in: " + error.response.data.message);
+      setErrorMessage(error.response.data);
     }
   };
 
@@ -57,6 +59,8 @@ function LoginPage() {
             required
           />
         </div>
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
+        {succesMessage && <p className="succes-message">{succesMessage}</p>}
         <div className="form-button-container">
           <button className="form-button" type="submit">
             Login
