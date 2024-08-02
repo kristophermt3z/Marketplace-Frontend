@@ -1,0 +1,27 @@
+/* navigation.css */
+.navigation-container {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.nav-links {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  padding: 10px 15px;
+  cursor: pointer;
+  text-decoration: none; /* Quitar subrayado de los enlaces */
+  color: inherit; /* Heredar el color del texto */
+}
+
+.nav-link:hover {
+  text-decoration: underline; /* O cualquier otro efecto de hover que desees */
+}
