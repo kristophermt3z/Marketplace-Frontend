@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useAuth } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 import "./RegisterPage.styles.css";
 
 function RegisterPage() {
@@ -10,6 +11,7 @@ function RegisterPage() {
   const [error, setError] = useState("");
 
   const { login } = useAuth();
+  const navigate = useNavigate(); // Get the navigate function
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -19,12 +21,19 @@ function RegisterPage() {
     }
 
     try {
-      await axios.post(`${process.env.REACT_APP_API_URL}/crear-vendedores`, {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_URL}/crear-vendedores`,
+        {
+          email,
+          password,
+        }
+      );
       alert("User registered successfully");
-      login(); // Automatically log in the user
+      login(response.data.token);
+      setEmail(""); 
+      setPassword(""); 
+      setConfirmPassword(""); 
+      navigate("/"); 
     } catch (error) {
       setError("Error registering the user");
     }
@@ -35,7 +44,9 @@ function RegisterPage() {
       <h1 className="register-title">Seller Registration</h1>
       <form className="register-form" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="email" className="form-label">Email</label>
+          <label htmlFor="email" className="form-label">
+            Email
+          </label>
           <input
             id="email"
             className="form-input"
@@ -46,7 +57,9 @@ function RegisterPage() {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="password" className="form-label">Password</label>
+          <label htmlFor="password" className="form-label">
+            Password
+          </label>
           <input
             id="password"
             className="form-input"
@@ -57,7 +70,9 @@ function RegisterPage() {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="confirm-password" className="form-label">Confirm Password</label>
+          <label htmlFor="confirm-password" className="form-label">
+            Confirm Password
+          </label>
           <input
             id="confirm-password"
             className="form-input"
@@ -69,7 +84,9 @@ function RegisterPage() {
         </div>
         {error && <p className="error-message">{error}</p>}
         <div className="form-button-container">
-          <button className="form-button" type="submit">Register</button>
+          <button className="form-button" type="submit">
+            Register
+          </button>
         </div>
       </form>
     </div>

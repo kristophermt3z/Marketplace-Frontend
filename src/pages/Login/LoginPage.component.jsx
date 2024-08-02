@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../../context/AuthContext";
 import "./LoginPage.styles.css";
@@ -8,6 +8,7 @@ function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { login } = useAuth();
+  const navigate = useNavigate(); // Get the navigate function
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -17,9 +18,10 @@ function LoginPage() {
         { email, password }
       );
       alert("Login successful: " + response.data.message);
-      setEmail("");
+      login(response.data.token); 
+      setEmail(""); 
       setPassword("");
-      login(); // Update authentication state
+      navigate("/");
     } catch (error) {
       alert("Error logging in: " + error.response.data.message);
     }

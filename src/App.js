@@ -4,6 +4,7 @@ import RegisterPage from "./pages/RegisterPage/RegisterPage.component.jsx";
 import LoginPage from "./pages/Login/LoginPage.component.jsx";
 import Navigation from "./pages/navigation/navigation.component.jsx";
 import Home from "./pages/home/home.component.jsx";
+import AuthRoute from "./components/AuthRoute/AuthRoute.component.jsx";
 
 function App() {
   return (
@@ -11,8 +12,22 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigation />}>
           <Route index element={<Home />} />
-          <Route path="register" element={<RegisterPage />} />
-          <Route path="login" element={<LoginPage />} />
+          <Route
+            path="register"
+            element={
+              <AuthRoute redirectTo="/">
+                <RegisterPage />
+              </AuthRoute>
+            }
+          />
+          <Route
+            path="login"
+            element={
+              <AuthRoute redirectTo="/">
+                <LoginPage />
+              </AuthRoute>
+            }
+          />
         </Route>
       </Routes>
     </BrowserRouter>
