@@ -1,15 +1,17 @@
 import React from 'react';
-import './App.css';
-import VendedorForm from './components/VendedorForm';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import RegisterPage from './pages/RegisterPage/RegisterPage.tsx';  
+import LoginPage from './pages/Login/LoginPage.tsx';       
 
 function App() {
-    return (
-        <div className="App">
-            <header className="App-header">
-                <VendedorForm />
-            </header>
-        </div>
-    );
+  return (
+    <Router>
+      <Routes>
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
