@@ -8,8 +8,8 @@ const Navigation = () => {
     <Fragment>
       <div className="navigation-container">
         <div className="nav-links">
-          <Link to="/" className="nav-link">Inicio</Link>
-          <Link to="/iniciar-sesion" className="nav-link">Iniciar Sesion</Link>
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/login" className="nav-link">Login</Link>
         </div>
       </div>
       <Outlet />

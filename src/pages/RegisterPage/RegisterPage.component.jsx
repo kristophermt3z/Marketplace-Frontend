@@ -28,7 +28,7 @@ function RegisterPage() {
 
   return (
     <div className="register-container">
-    <h1 className="register-title">Registro de Usuario</h1>
+    <h1 className="register-title">Seller Registration</h1>
     <form className="register-form" onSubmit={handleSubmit}>
         <div className="form-group">
             <label htmlFor="email" className="form-label">Email</label>
@@ -42,7 +42,7 @@ function RegisterPage() {
             />
         </div>
         <div className="form-group">
-            <label htmlFor="password" className="form-label">Contraseña</label>
+            <label htmlFor="password" className="form-label">Password</label>
             <input
                 id="password"
                 className="form-input"
@@ -53,7 +53,7 @@ function RegisterPage() {
             />
         </div>
         <div className="form-group">
-            <label htmlFor="confirm-password" className="form-label">Confirmar Contraseña</label>
+            <label htmlFor="confirm-password" className="form-label">Confirm Password</label>
             <input
                 id="confirm-password"
                 className="form-input"
@@ -65,10 +65,11 @@ function RegisterPage() {
         </div>
         {error && <p className="error-message">{error}</p>}
         <div className="form-button-container">
-            <button className="form-button" type="submit">Registrar</button>
+            <button className="form-button" type="submit">Register</button>
         </div>
     </form>
 </div>
+
 
   );
 }

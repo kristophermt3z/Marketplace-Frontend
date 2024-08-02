@@ -11,8 +11,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigation />}>
           <Route index element={<Home />} />
-          <Route path="registrar-usuario" element={<RegisterPage />} />
-          <Route path="iniciar-sesion" element={<LoginPage />} />
+          <Route path="register" element={<RegisterPage />} />
+          <Route path="login" element={<LoginPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

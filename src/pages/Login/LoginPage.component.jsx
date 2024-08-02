@@ -25,48 +25,49 @@ function LoginPage() {
 
   return (
     <div className="login-container">
-      <h2 className="login-title">Iniciar Sesión</h2>
-      <form className="login-form" onSubmit={handleSubmit}>
+    <h2 className="login-title">Login</h2>
+    <form className="login-form" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="email" className="form-label">
-            Email:
-          </label>
-          <input
-            id="email"
-            className="form-input"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+            <label htmlFor="email" className="form-label">
+                Email:
+            </label>
+            <input
+                id="email"
+                className="form-input"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+            />
         </div>
         <div className="form-group">
-          <label htmlFor="password" className="form-label">
-            Contraseña:
-          </label>
-          <input
-            id="password"
-            className="form-input"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+            <label htmlFor="password" className="form-label">
+                Password:
+            </label>
+            <input
+                id="password"
+                className="form-input"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+            />
         </div>
         <div className="form-button-container">
-          <button className="form-button" type="submit">
-            Login
-          </button>
+            <button className="form-button" type="submit">
+                Login
+            </button>
         </div>
-      </form>
-      <p className="register-prompt">
-        ¿No tienes una cuenta?{" "}
-        <Link to="/registrar-usuario" className="register-link">
-          Crea una aquí
+    </form>
+    <p className="register-prompt">
+        Don't have an account?{' '}
+        <Link to="/register" className="register-link">
+            Create one here
         </Link>
         .
-      </p>
-    </div>
+    </p>
+</div>
+
   );
 }
 
