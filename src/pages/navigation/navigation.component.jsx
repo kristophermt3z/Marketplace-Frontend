@@ -5,7 +5,7 @@ import { useAuth } from "../../context/AuthContext";
 import "./navigation.styles.css";
 
 const Navigation = () => {
-  const { isAuthenticated, logout } = useAuth();
+  const { isAuthenticated, role, logout } = useAuth();
 
   return (
     <Fragment>
@@ -16,9 +16,15 @@ const Navigation = () => {
           </Link>
         </div>
         <div className="nav-links">
-          <Link to="/" className="nav-link">
-            Home
-          </Link>
+          {isAuthenticated && role === "vendedor" ? (
+            <Link to="/seller-dashboard" className="nav-link">
+              Dashboard
+            </Link>
+          ) : (
+            <Link to="/" className="nav-link">
+              Home
+            </Link>
+          )}
           {isAuthenticated ? (
             <span className="nav-link" onClick={logout}>
               Logout
