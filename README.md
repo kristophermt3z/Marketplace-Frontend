@@ -1,4 +1,7 @@
-# Marketplace-Frontend
+# Marketplace-Frontend - Technical documentation
+
+## Overview
+Marketplace Application - [Functional Documentation](https://github.com/salvadormartin3z/Marketplace/blob/main/README.md)
 
 ## Link de Producción
 Visita la versión en producción aquí: [Marketplace](https://marketplace-salvadormartinez.netlify.app/)
