@@ -1,4 +1,4 @@
-# Marketplace-Frontend
+# Marketplace-Frontend - Technical documentation
 
 ## Overview
 Marketplace Application - [Functional Documentation](https://github.com/salvadormartin3z/Marketplace/blob/main/README.md)
