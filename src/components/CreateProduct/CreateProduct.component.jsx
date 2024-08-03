@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./CreateProduct.styles.css";
 
 const CreateProduct = () => {
   const [name, setName] = useState("");
@@ -44,6 +45,7 @@ const CreateProduct = () => {
       setSku("");
       setQuantity("");
       setPrice("");
+      setError("");
     } catch (err) {
       console.log(err);
       setError("Error creating product.");
@@ -51,35 +53,41 @@ const CreateProduct = () => {
   };
 
   return (
-    <div>
-      <h2>Create Product</h2>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      <form onSubmit={handleSubmit}>
+    <div className="create-product-container">
+      <h2 className="create-product-title">Create Product</h2>
+      {error && <p className="create-product-error">{error}</p>}
+      <form className="create-product-form" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          className="create-product-input"
         />
         <input
           type="text"
           placeholder="SKU"
           value={sku}
           onChange={(e) => setSku(e.target.value)}
+          className="create-product-input"
         />
         <input
           type="number"
           placeholder="Quantity"
           value={quantity}
           onChange={(e) => setQuantity(e.target.value)}
+          className="create-product-input"
         />
         <input
           type="number"
           placeholder="Price"
           value={price}
           onChange={(e) => setPrice(e.target.value)}
+          className="create-product-input"
         />
-        <button type="submit">Create Product</button>
+        <button type="submit" className="create-product-button">
+          Create Product
+        </button>
       </form>
     </div>
   );
