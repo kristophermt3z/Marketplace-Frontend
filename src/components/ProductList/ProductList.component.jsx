@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "./ProductList.styles.css";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -22,15 +23,24 @@ const ProductList = () => {
   }, []);
 
   return (
-    <div>
-      <h2>My Products</h2>
-      <ul>
-        {products.map((product) => (
-          <li key={product.id}>
-            {product.name} - SKU: {product.sku} - Quantity: {product.quantity} - Price: {product.price}
-          </li>
-        ))}
-      </ul>
+    <div className="product-list-container">
+      <h2 className="product-list-title">My Products</h2>
+      {products.length === 0 ? (
+        <p className="product-empty">No products found.</p>
+      ) : (
+        <ul className="product-list">
+          {products.map((product) => (
+            <li key={product.id} className="product-list-item">
+              <div className="product-details">
+                <span className="product-detail">Name: {product.name}</span>
+                <span className="product-detail">SKU: {product.sku}</span>
+                <span className="product-detail">Quantity: {product.quantity}</span>
+              </div>
+              <span className="product-price">Price: ${product.price}</span>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };

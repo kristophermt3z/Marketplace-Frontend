@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useAuth } from "../../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./RegisterPage.styles.css";
 
 function RegisterPage() {
@@ -12,7 +12,7 @@ function RegisterPage() {
   const [succesMessage, setSuccesMessage] = useState("");
 
   const { login } = useAuth();
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -36,7 +36,7 @@ function RegisterPage() {
       setPassword("");
       setConfirmPassword("");
       if (role === "vendedor") {
-        navigate("/seller-dashboard"); 
+        navigate("/seller-dashboard");
       } else {
         navigate("/");
       }
@@ -96,6 +96,13 @@ function RegisterPage() {
           </button>
         </div>
       </form>
+      <p className="register-prompt">
+        Already have an account?{" "}
+        <Link to="/login" className="register-link">
+          Log in here
+        </Link>
+        .
+      </p>
     </div>
   );
 }

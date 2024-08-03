@@ -44,7 +44,7 @@
     width: 100%;
     max-width: 150px;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #2A3F32;
     color: white;
     border: none;
     border-radius: 4px;
@@ -53,7 +53,7 @@
 }
 
 .form-button:hover {
-    background-color: #0056b3;
+    background-color: #354B5E;
 }
 
 .error-message {
@@ -64,4 +64,20 @@
 .succes-message {
     color: rgb(51, 191, 23);
     text-align: center;
+}
+
+
+.register-prompt {
+    margin-top: 20px;
+    text-align: center;
+    font-size: small;
+}
+
+.register-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-link:hover {
+    text-decoration: underline;
 }

@@ -18,7 +18,7 @@
   }
   
   .dashboard-button {
-    background-color: #007bff;
+    background-color: #2A3F32;
     color: white;
     border: none;
     border-radius: 5px;
@@ -30,7 +30,7 @@
   }
   
   .dashboard-button:hover {
-    background-color: #0056b3;
+    background-color: #354B5E;
   }
   
   .dashboard-content {
