@@ -12,8 +12,20 @@ const CreateProduct = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!name || !sku || !quantity || !price) {
-      setError("All fields are required (name, sku, quantity, price).");
+    if (!name) {
+      setError("Name is required.");
+      return;
+    }
+    if (!sku) {
+      setError("SKU is required.");
+      return;
+    }
+    if (!quantity) {
+      setError("Quantity is required.");
+      return;
+    }
+    if (!price) {
+      setError("Price is required.");
       return;
     }
 
