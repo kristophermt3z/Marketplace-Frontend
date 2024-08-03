@@ -3,9 +3,20 @@
   height: 70px;
   width: 100%;
   display: flex;
-  justify-content:flex-end;
+  justify-content:space-between;
   margin-bottom: 25px;
   margin-right: 10px;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 60px; 
+  margin-top: 20px; 
+  margin-left: 35px; 
 }
 
 .nav-links {
@@ -19,10 +30,10 @@
 .nav-link {
   padding: 10px 15px;
   cursor: pointer;
-  text-decoration: none; /* Quitar subrayado de los enlaces */
-  color: inherit; /* Heredar el color del texto */
+  text-decoration: none;
+  color: inherit; 
 }
 
 .nav-link:hover {
-  text-decoration: underline; /* O cualquier otro efecto de hover que desees */
+  text-decoration: underline; 
 }
