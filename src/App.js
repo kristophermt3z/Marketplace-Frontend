@@ -5,6 +5,8 @@ import LoginPage from "./pages/Login/LoginPage.component.jsx";
 import Navigation from "./pages/navigation/navigation.component.jsx";
 import Home from "./pages/home/home.component.jsx";
 import AuthRoute from "./components/AuthRoute/AuthRoute.component.jsx";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute.components.jsx";
+import SellerDashboard from "./pages/SellerDashboard/SellerDashboard.component.jsx";
 
 function App() {
   return (
@@ -12,6 +14,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigation />}>
           <Route index element={<Home />} />
+          <Route
+            path="seller-dashboard"
+            element={
+              <ProtectedRoute role="vendedor" redirectTo="/">
+                <SellerDashboard />
+              </ProtectedRoute>
+            }
+          />
           <Route
             path="register"
             element={

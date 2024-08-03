@@ -19,11 +19,16 @@ function LoginPage() {
         `${process.env.REACT_APP_API_URL}/login`,
         { email, password }
       );
+      const { token, role } = response.data;
       setSuccesMessage(response.data.message);
-      login(response.data.token); 
+      login(token, role); 
       setEmail(""); 
       setPassword("");
-      navigate("/");
+      if (role === "vendedor") {
+        navigate("/seller-dashboard"); 
+      } else {
+        navigate("/");
+      }
     } catch (error) {
       setErrorMessage(error.response.data);
     }
