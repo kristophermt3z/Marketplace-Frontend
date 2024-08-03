@@ -29,12 +29,17 @@ function RegisterPage() {
           password,
         }
       );
+      const { token, role } = response.data;
       setSuccesMessage(response.data);
-      login(response.data.token);
+      login(token, role);
       setEmail("");
       setPassword("");
       setConfirmPassword("");
-      navigate("/");
+      if (role === "vendedor") {
+        navigate("/seller-dashboard"); 
+      } else {
+        navigate("/");
+      }
     } catch (error) {
       setErrorMessage(error.response.data);
     }
