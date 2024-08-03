@@ -17,7 +17,7 @@ function App() {
           <Route
             path="seller-dashboard"
             element={
-              <ProtectedRoute role="vendedor" redirectTo="/">
+              <ProtectedRoute role="vendedor" redirectTo="/login">
                 <SellerDashboard />
               </ProtectedRoute>
             }
