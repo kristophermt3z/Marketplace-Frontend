@@ -17,18 +17,35 @@ const CreateProduct = () => {
     }
 
     try {
-      await axios.post(`${process.env.REACT_APP_API_URL}/products`, {
-        name,
-        sku,
-        quantity: parseInt(quantity),
-        price: parseFloat(price),
-      });
+      const token = localStorage.getItem("authToken"); // Retrieve the token from localStorage
+
+      if (!token) {
+        setError("User is not authenticated.");
+        return;
+      }
+
+      await axios.post(
+        `${process.env.REACT_APP_API_URL}/create-products`,
+        {
+          name,
+          sku,
+          quantity: parseInt(quantity),
+          price: parseFloat(price),
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`, // Include the token in the Authorization header
+          },
+        }
+      );
+
       alert("Product created successfully.");
       setName("");
       setSku("");
       setQuantity("");
       setPrice("");
     } catch (err) {
+      console.log(err);
       setError("Error creating product.");
     }
   };
