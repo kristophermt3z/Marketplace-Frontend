@@ -17,7 +17,7 @@ const CreateProduct = () => {
     }
 
     try {
-      const token = localStorage.getItem("authToken"); // Retrieve the token from localStorage
+      const token = localStorage.getItem("authToken");
 
       if (!token) {
         setError("User is not authenticated.");
@@ -34,7 +34,7 @@ const CreateProduct = () => {
         },
         {
           headers: {
-            Authorization: `Bearer ${token}`, // Include the token in the Authorization header
+            Authorization: `Bearer ${token}`,
           },
         }
       );

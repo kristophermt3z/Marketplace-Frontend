@@ -12,7 +12,7 @@ function RegisterPage() {
   const [succesMessage, setSuccesMessage] = useState("");
 
   const { login } = useAuth();
-  const navigate = useNavigate(); // Get the navigate function
+  const navigate = useNavigate(); 
 
   const handleSubmit = async (event) => {
     event.preventDefault();
