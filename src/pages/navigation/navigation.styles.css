@@ -16,7 +16,7 @@
 .logo {
   height: 60px; 
   margin-top: 20px; 
-  margin-left: 35px; 
+  margin-left: 6%; 
 }
 
 .nav-links {
@@ -36,4 +36,11 @@
 
 .nav-link:hover {
   text-decoration: underline; 
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 30px; 
+    margin-top: 5px; 
+  }
 }
