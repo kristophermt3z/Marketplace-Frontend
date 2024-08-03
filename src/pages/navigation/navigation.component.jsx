@@ -16,7 +16,11 @@ const Navigation = () => {
           </Link>
         </div>
         <div className="nav-links">
-          {isAuthenticated && role === "vendedor" ? (
+          {isAuthenticated && role === "admin" ? (
+            <Link to="/admin-dashboard" className="nav-link">
+              Admin
+            </Link>
+          ) : isAuthenticated && role === "vendedor" ? (
             <Link to="/seller-dashboard" className="nav-link">
               Dashboard
             </Link>

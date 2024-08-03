@@ -7,6 +7,7 @@ import Home from "./pages/home/home.component.jsx";
 import AuthRoute from "./components/AuthRoute/AuthRoute.component.jsx";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute.components.jsx";
 import SellerDashboard from "./pages/SellerDashboard/SellerDashboard.component.jsx";
+import AdminDashboard from "./pages/AdminDashboard/AdminDashboard.component.jsx";
 
 function App() {
   return (
@@ -19,6 +20,14 @@ function App() {
             element={
               <ProtectedRoute role="vendedor" redirectTo="/login">
                 <SellerDashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="admin-dashboard"
+            element={
+              <ProtectedRoute role="admin" redirectTo="/login">
+                <AdminDashboard />
               </ProtectedRoute>
             }
           />

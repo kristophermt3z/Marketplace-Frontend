@@ -21,11 +21,13 @@ function LoginPage() {
       );
       const { token, role } = response.data;
       setSuccesMessage(response.data.message);
-      login(token, role); 
-      setEmail(""); 
+      login(token, role);
+      setEmail("");
       setPassword("");
       if (role === "vendedor") {
-        navigate("/seller-dashboard"); 
+        navigate("/seller-dashboard");
+      } else if (role === "admin") {
+        navigate("/admin-dashboard");
       } else {
         navigate("/");
       }
