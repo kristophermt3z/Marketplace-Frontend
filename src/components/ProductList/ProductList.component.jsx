@@ -28,18 +28,18 @@ const ProductList = () => {
       {products.length === 0 ? (
         <p className="product-empty">No products found.</p>
       ) : (
-        <ul className="product-list">
+        <div className="product-list">
           {products.map((product) => (
-            <li key={product.id} className="product-list-item">
-              <div className="product-details">
-                <span className="product-detail">Name: {product.name}</span>
-                <span className="product-detail">SKU: {product.sku}</span>
-                <span className="product-detail">Quantity: {product.quantity}</span>
+            <div key={product.id} className="product-card">
+              <div className="product-info">
+                <h3 className="product-name">{product.name}</h3>
+                <p className="product-sku">SKU: {product.sku}</p>
+                <p className="product-quantity">Quantity: {product.quantity}</p>
+                <p className="product-price">Price: ${product.price}</p>
               </div>
-              <span className="product-price">Price: ${product.price}</span>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </div>
   );

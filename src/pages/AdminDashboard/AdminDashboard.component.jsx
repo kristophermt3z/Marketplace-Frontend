@@ -46,20 +46,20 @@ const AdminDashboard = () => {
           Filter
         </button>
       </div>
-      <ul className="admin-product-list">
+      <div className="admin-product-list">
         {filteredProducts.map((product) => (
-          <li key={product.id} className="admin-product-list-item">
+          <div key={product.id} className="admin-product-card">
             <div className="admin-product-details">
               <span className="admin-product-detail">Name: {product.name}</span>
               <span className="admin-product-detail">SKU: {product.sku}</span>
               <span className="admin-product-detail">Price: ${product.price}</span>
-              <span className="admin-product-detail">
+              <span className="admin-product-seller">
                 Seller ID: {product.seller ? product.seller.id : "N/A"}
               </span>
             </div>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
