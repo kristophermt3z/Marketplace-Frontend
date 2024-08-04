@@ -61,49 +61,54 @@ const Home = () => {
   return (
     <div className="home-container">
       <h1>All Products</h1>
-      <div className="filter-container">
+      <div className="home-filter-container">
         <input
           type="text"
           placeholder="Search by name"
           value={searchName}
           onChange={(e) => setSearchName(e.target.value)}
-          className="filter-input"
+          className="home-filter-input"
         />
         <input
           type="text"
           placeholder="Search by SKU"
           value={searchSku}
           onChange={(e) => setSearchSku(e.target.value)}
-          className="filter-input"
+          className="home-filter-input"
         />
         <input
           type="number"
           placeholder="Min price"
           value={priceMin}
           onChange={(e) => setPriceMin(e.target.value)}
-          className="filter-input"
+          className="home-filter-input"
         />
         <input
           type="number"
           placeholder="Max price"
           value={priceMax}
           onChange={(e) => setPriceMax(e.target.value)}
-          className="filter-input"
+          className="home-filter-input"
         />
-        <button onClick={handleFilter} className="filter-button">Filter</button>
-        <button onClick={handleResetFilter} className="reset-button">Reset Filter</button>
+        <button onClick={handleFilter} className="home-filter-button">Filter</button>
+        <button onClick={handleResetFilter} className="home-reset-button">Reset Filter</button>
       </div>
-      <ul className="product-list">
+      <div className="home-product-list">
         {filteredProducts.map((product) => (
-          <li key={product.id} className="product-list-item">
-            <div className="product-details">
-              <span className="product-detail">Name: {product.name}</span>
-              <span className="product-detail">SKU: {product.sku}</span>
-              <span className="product-detail">Price: ${product.price}</span>
+          <div key={product.id} className="home-product-card">
+            <img
+              src="https://images.unsplash.com/photo-1633683788767-ac390c4bf988?q=80&w=859&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt={product.name}
+              className="home-product-image"
+            />
+            <div className="home-product-details">
+              <span className="home-product-detail">Name: {product.name}</span>
+              <span className="home-product-detail">SKU: {product.sku}</span>
+              <span className="home-product-detail">Price: ${product.price}</span>
             </div>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
