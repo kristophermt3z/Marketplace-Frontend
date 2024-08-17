@@ -3,29 +3,29 @@
 ## Overview
 Marketplace Application - [Functional Documentation](https://github.com/salvadormartin3z/Marketplace/blob/main/README.md)
 
-## Link de Producción
-Visita la versión en producción aquí: [Marketplace](https://marketplace-salvadormartinez.netlify.app/)
+## Production Link
+Visit the production version here: [Marketplace](https://marketplace-salvadormartinez.netlify.app/)
 
-## Descripción
-Este es el frontend para un marketplace, implementado utilizando React. Este frontend se conecta con un backend REST API para gestionar operaciones relacionadas con vendedores y otros recursos del marketplace.
+## Description
+This is the frontend for a marketplace, implemented using React. This frontend connects with a backend REST API to manage operations related to sellers and other marketplace resources.
 
-## Requisitos Previos
-Antes de comenzar, asegúrate de tener instalado Node.js y npm en tu sistema. Este proyecto fue creado con `create-react-app`.
+## Prerequisites
+Before getting started, make sure you have Node.js and npm installed on your system. This project was created with `create-react-app`.
 
-## Instalación
-Para instalar y configurar el proyecto localmente, sigue estos pasos:
+## Installation
+To install and set up the project locally, follow these steps:
 
-1. Clona el repositorio:
+1. Clone the repository:
    ```bash
    git clone https://github.com/salvadormartin3z/Marketplace-Frontend
    cd Marketplace-Frontend
 
-2. Instala las dependencias:
+2. Install the dependencies:
     ```bash
     npm install
     ```
 
-3. Configura las variables de entorno:
+3. Set up environment variables:
     Crea un archivo .env en la raíz del proyecto con las siguientes variables necesarias para la conexión con el backend y otras configuraciones importantes.
 
     ```bash
@@ -34,19 +34,19 @@ Para instalar y configurar el proyecto localmente, sigue estos pasos:
 
     Nota: El archivo .env no se incluye en el repositorio por motivos de seguridad. Debes crear tu propio archivo .env localmente.
 
-4. Inicia el servidor:
+4. Start the server:
     ```bash
     npm start
     ```
 
     Esto compilará la aplicación y abrirá una ventana en tu navegador por defecto. Si el navegador no se abre automáticamente, puedes acceder manualmente a http://localhost:3000.
 
-5. También necesitarás instalar y configurar el backend del proyecto para una funcionalidad completa:
+5. You will also need to install and set up the project's backend for full functionality:
 - **Backend**: [Backend en GitHub](https://github.com/salvadormartin3z/Marketplace-Backend)
 
-## Contacto
+## Contact
 
-Puedes encontrarme y contactarme a través de las siguientes plataformas:
+You can find and contact me through the following platforms:
 
 - **Portafolio**: [Salvador Martínez - Portafolio](https://salvadormartin3z.netlify.app/)
 - **LinkedIn**: [Salvador Martínez en LinkedIn](https://www.linkedin.com/in/salvadormtz/)
