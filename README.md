@@ -26,13 +26,13 @@ To install and set up the project locally, follow these steps:
     ```
 
 3. Set up environment variables:
-    Crea un archivo .env en la raíz del proyecto con las siguientes variables necesarias para la conexión con el backend y otras configuraciones importantes.
+   Create a .env file in the root of the project with the following variables necessary for the backend connection and other important configurations.
 
     ```bash
     REACT_APP_API_URL=http://localhost:8000
     ```
 
-    Nota: El archivo .env no se incluye en el repositorio por motivos de seguridad. Debes crear tu propio archivo .env localmente.
+   Note: The .env file is not included in the repository for security reasons. You must create your own .env file locally.
 
 4. Start the server:
     ```bash
