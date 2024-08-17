@@ -39,7 +39,7 @@ To install and set up the project locally, follow these steps:
     npm start
     ```
 
-    Esto compilará la aplicación y abrirá una ventana en tu navegador por defecto. Si el navegador no se abre automáticamente, puedes acceder manualmente a http://localhost:3000.
+   This will compile the application and open a window in your default browser. If the browser does not open automatically, you can manually access http://localhost:3000.
 
 5. You will also need to install and set up the project's backend for full functionality:
 - **Backend**: [Backend en GitHub](https://github.com/salvadormartin3z/Marketplace-Backend)
@@ -52,8 +52,8 @@ You can find and contact me through the following platforms:
 - **LinkedIn**: [Salvador Martínez en LinkedIn](https://www.linkedin.com/in/salvadormtz/)
 - **GitHub**: [Salvador Martínez en GitHub](https://github.com/salvadormartin3z)
 
-## Contribuir
-Si deseas contribuir al proyecto, considera hacer fork del repositorio y enviar tus pull requests. También puedes abrir issues si encuentras problemas o tienes sugerencias de mejoras.
+## Contributing
+If you want to contribute to the project, consider forking the repository and submitting your pull requests. You can also open issues if you find any problems or have suggestions for improvements.
 
-## Licencia
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE en este repositorio para más detalles.
+## License
+This project is licensed under the MIT License. See the LICENSE file in this repository for more details.
