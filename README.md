@@ -3,9 +3,6 @@
 ## Overview
 Marketplace Application - [Functional Documentation](https://github.com/salvadormartin3z/Marketplace/blob/main/README.md)
 
-## Production Link
-Visit the production version here: [Marketplace](https://marketplace-salvadormartinez.netlify.app/)
-
 ## Description
 This is the frontend for a marketplace, implemented using React. This frontend connects with a backend REST API to manage operations related to sellers and other marketplace resources.
 
