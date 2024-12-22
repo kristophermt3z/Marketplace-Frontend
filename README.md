@@ -1,7 +1,7 @@
 # Marketplace-Frontend - Technical documentation
 
 ## Overview
-Marketplace Application - [Functional Documentation](https://github.com/kristophermt3z/Marketplace/blob/main/README.md)
+Marketplace Application - [Functional Documentation](https://github.com/kristophermt3z/Marketplace)
 
 ## Description
 This is the frontend for a marketplace, implemented using React. This frontend connects with a backend REST API to manage operations related to sellers and other marketplace resources.
