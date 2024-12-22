@@ -1,7 +1,7 @@
 # Marketplace-Frontend - Technical documentation
 
 ## Overview
-Marketplace Application - [Functional Documentation](https://github.com/salvadormartin3z/Marketplace/blob/main/README.md)
+Marketplace Application - [Functional Documentation](https://github.com/kristophermt3z/Marketplace/blob/main/README.md)
 
 ## Description
 This is the frontend for a marketplace, implemented using React. This frontend connects with a backend REST API to manage operations related to sellers and other marketplace resources.
@@ -47,7 +47,7 @@ You can find and contact me through the following platforms:
 
 - **Portafolio**: [Salvador Martínez - Portafolio](https://salvadormartin3z.netlify.app/)
 - **LinkedIn**: [Salvador Martínez en LinkedIn](https://www.linkedin.com/in/salvadormtz/)
-- **GitHub**: [Salvador Martínez en GitHub](https://github.com/salvadormartin3z)
+- **GitHub**: [Salvador Martínez en GitHub](https://github.com/kristophermt3z)
 
 ## Contributing
 If you want to contribute to the project, consider forking the repository and submitting your pull requests. You can also open issues if you find any problems or have suggestions for improvements.
